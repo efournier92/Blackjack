@@ -11,7 +11,7 @@ Building this application gave me an opportunity to write a program with multipl
   * `rank`
   * `suit`
 * Methods:
-  * `facecard?``
+  * `facecard?`
     * Checks whether or not a give card is a facecard
 
 #####`Deck`
@@ -32,7 +32,7 @@ Building this application gave me an opportunity to write a program with multipl
   * `printer`
     * outputs contents of current hand
 
-## User Stories Satisfied
+## User Stories
 
 #### Deal initial hand
 
