@@ -1,6 +1,7 @@
-require_relative "card"
-require_relative "deck"
-require_relative "hand"
+require_relative 'card'
+require_relative 'deck'
+require_relative 'hand'
+require 'pry'
 
 class Blackjack
   SEP = '************************'
@@ -29,7 +30,7 @@ class Blackjack
     print "H or S?\n> "
     user_input = gets.chomp
 
-    until user_input == 'S'
+    until user_input == 'S' || player_hand.bust?
       if user_input == 'H'
         player_hand.cards << deck.cards.pop
         player_hand.printer('PLAYER')
@@ -63,6 +64,3 @@ class Blackjack
     puts "#{SEP}"
   end
 end
-
-blackjack = Blackjack.new
-blackjack.play

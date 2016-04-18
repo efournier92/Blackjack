@@ -8,16 +8,6 @@ class Deck
     @cards = build_deck
   end
 
-  def deal_one(hand)
-    hand << @cards.pop
-  end
-
-  def deal_two(hand)
-    2.times do
-      hand << @cards.pop
-    end
-  end
-
   def build_deck
     cards = []
     SUITS.each do |suit|
@@ -27,5 +17,15 @@ class Deck
     end
     cards = cards.shuffle!
     @cards = cards
+  end
+
+  def deal_one(hand)
+    hand << @cards.pop
+  end
+
+  def deal_two(hand)
+    2.times do
+      hand << @cards.pop
+    end
   end
 end
